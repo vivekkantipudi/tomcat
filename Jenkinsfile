@@ -34,13 +34,13 @@ pipeline {
 
         stage('Docker Image Build') {
             steps {
-                sh 'docker build -t amazon .'
+                sh 'docker build -t thub .'
             }
         }
 
         stage('Docker Deploy') {
             steps {
-                sh 'docker run -d -p 6060:8080 --name azure amazon'
+                sh 'docker run -d -p 6060:8080 --name aditya thub'
             }
         }
     }
